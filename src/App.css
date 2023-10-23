@@ -4,6 +4,9 @@
   min-height: 100vh;
   margin: 0 auto;
 }
+.dashed_border {
+  border: 1px dashed gray;
+}
 
 /* CSS */
 .nav {
@@ -39,7 +42,7 @@
 .text_area {
   padding: 10px;
   color: black;
-  border: 1px dashed gray;
+
   border-radius: 10px;
   width: min(100%, 373px);
   min-height: 40%;
@@ -50,7 +53,7 @@
 }
 .image_area {
   color: black;
-  border: 1px dashed gray;
+
   border-radius: 10px;
   min-width: 80%;
   min-height: 50%;
@@ -59,7 +62,6 @@
   left: -48px;
   transform: translateY(-50%);
 }
-
 .blue-button {
   background-color: #0f13d7;
   color: white;

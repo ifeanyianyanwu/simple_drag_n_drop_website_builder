@@ -106,49 +106,40 @@ function App() {
   const handleDownloadCode = () => {
     const code = document.getElementById("sourceCode");
 
-    // let cssCode = "";
-    // for (let i = 0; i < computedStyles.length; i++) {
-    //   const propertyName = computedStyles[i];
-    //   const propertyValue = computedStyles.getPropertyValue(propertyName);
-    //   cssCode += `${propertyName}: ${propertyValue};\n`;
-    // }
-    // setOutputCSS(cssCode);
+    const stylesheet = [...document.styleSheets[0].cssRules].slice(2);
+    let cssCode = "";
+    const htmlCode = `<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    ${code!.outerHTML}
+    </body>
+    </html>`;
+    stylesheet.forEach((item) => (cssCode += item.cssText + "\n"));
 
-    // const =stylesheetdocument.styleSheets[].cssRules[].cssText
+    const blob1 = new Blob([htmlCode], { type: "text/plain" });
+    const blob2 = new Blob([cssCode], { type: "text/plain" });
 
-    // var css = [];
-    // for (var sheeti = 0; sheeti < document.styleSheets.length; sheeti++) {
-    //   var sheet = document.styleSheets[sheeti];
-    //   var rules = "cssRules" in sheet ? sheet.cssRules : sheet.rules;
-    //   for (var rulei = 0; rulei < rules.length; rulei++) {
-    //     var rule = rules[rulei];
-    //     if ("cssText" in rule) css.push(rule.cssText);
-    //     else
-    //       css.push(rule.selectorText + " {\n" + rule.style.cssText + "\n}\n");
-    //   }
-    // }
+    const url1 = URL.createObjectURL(blob1);
+    const url2 = URL.createObjectURL(blob2);
 
-    // const allCSS = [...document.styleSheets]
-    //   .map((styleSheet) => {
-    //     try {
-    //       return [...styleSheet.cssRules].map((rule) => rule.cssText).join("");
-    //     } catch (e) {
-    //       console.log(
-    //         "Access to stylesheet %s is denied. Ignoring...",
-    //         styleSheet.href
-    //       );
-    //     }
-    //   })
-    //   .filter(Boolean)
-    //   .join("\n");
+    const a1 = document.createElement("a");
+    const a2 = document.createElement("a");
 
-    // https://stackoverflow.com/questions/1679507/getting-all-css-used-in-html-file
+    a1.href = url1;
+    a2.href = url2;
 
-    // return css.join("\n");
-    const stylesheet = document.styleSheets[0];
-    console.log(stylesheet);
+    a1.download = "index.html";
+    a2.download = "styles.css";
 
-    console.log(code?.outerHTML);
+    a1.click();
+    a2.click();
+
+    URL.revokeObjectURL(url1);
+    URL.revokeObjectURL(url2);
   };
 
   return (
@@ -238,7 +229,7 @@ function App() {
           <section className="main_content">
             <div className="main_section">
               <div
-                className="text_area"
+                className="text_area dashed_border"
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
               >
@@ -247,7 +238,7 @@ function App() {
             </div>
             <div className="secondary_section">
               <div
-                className="image_area"
+                className="image_area dashed_border"
                 onDrop={handleImageDrop}
                 onDragOver={handleDragOver}
               >
