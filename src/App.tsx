@@ -1,5 +1,6 @@
 import { useState, DragEventHandler, useEffect, ChangeEvent } from "react";
 import "./App.css";
+import { createAndDownloadFile } from "./utils/createAndDownLoadFile";
 
 function App() {
   const [draggedElement, setDraggedElement] = useState<any>();
@@ -105,7 +106,6 @@ function App() {
 
   const handleDownloadCode = () => {
     const code = document.getElementById("sourceCode");
-
     const stylesheet = [...document.styleSheets[0].cssRules].slice(2);
     let cssCode = "";
     const htmlCode = `<html lang="en">
@@ -120,26 +120,8 @@ function App() {
     </html>`;
     stylesheet.forEach((item) => (cssCode += item.cssText + "\n"));
 
-    const blob1 = new Blob([htmlCode], { type: "text/plain" });
-    const blob2 = new Blob([cssCode], { type: "text/plain" });
-
-    const url1 = URL.createObjectURL(blob1);
-    const url2 = URL.createObjectURL(blob2);
-
-    const a1 = document.createElement("a");
-    const a2 = document.createElement("a");
-
-    a1.href = url1;
-    a2.href = url2;
-
-    a1.download = "index.html";
-    a2.download = "styles.css";
-
-    a1.click();
-    a2.click();
-
-    URL.revokeObjectURL(url1);
-    URL.revokeObjectURL(url2);
+    createAndDownloadFile(htmlCode, "index.html");
+    createAndDownloadFile(cssCode, "styles.css");
   };
 
   return (
