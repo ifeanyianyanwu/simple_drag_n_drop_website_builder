@@ -11,9 +11,9 @@ Delete Elements: Remove elements with the click of a button.
 To use this website builder, follow these steps:
 
 Clone this repository to your local machine.
-Install the required dependencies using npm install or yarn install.
+Install the required dependencies using npm install.
 Start the development server with npm start or yarn start.
-Open your browser and go to http://localhost:3000 to access the website builder.
+Open your browser and go to http://localhost:5173 to access the website builder.
 #How to Use
 Drag and drop elements from the sidebar onto the canvas to add content.
 Click on any element on the canvas to select it.
