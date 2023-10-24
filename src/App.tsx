@@ -6,6 +6,7 @@ import { TbTextSize } from "react-icons/tb";
 import { FaRegImage } from "react-icons/fa6";
 import { RxButton } from "react-icons/rx";
 import { HiCursorClick } from "react-icons/hi";
+import Potrait from "../src/assets/potrait.jpg";
 
 function App() {
   const [draggedElement, setDraggedElement] = useState<any>();
@@ -58,14 +59,14 @@ function App() {
     const elementType = draggedElement.innerText;
     const target = e.target;
 
-    if (target.innerText === "Drop text content here")
-      e.target.replaceChildren();
+    const deleteButton = document.createElement("p");
+    deleteButton.innerHTML = "⨯";
+    deleteButton.className = "delete";
+    deleteButton.addEventListener("click", handleDelete);
+    draggedElement.appendChild(deleteButton);
 
     draggedElement.setAttribute("contentEditable", true);
-    draggedElement.addEventListener("drop", (e: any) => {
-      e.preventDefault();
-      e.stopPropagation();
-    });
+    draggedElement.addEventListener("drop", handlePreventDrop);
 
     switch (elementType) {
       case "Heading":
@@ -92,16 +93,41 @@ function App() {
     target.appendChild(draggedElement);
   };
 
+  function handleDelete(e: any) {
+    e.stopPropagation();
+    let element = e.target.parentNode as HTMLElement;
+    e.target.parentNode.parentNode.removeChild(element);
+  }
+
+  function handleImageDelete(e: any) {
+    e.stopPropagation();
+    let element = e.target.previousElementSibling as HTMLElement;
+    e.target.parentNode.removeChild(element);
+    e.target.parentNode.removeChild(e.target);
+  }
+
+  function handlePreventDrop(e: any) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   const handleImageDrop = (e: any) => {
     if (draggedElement.innerText) return;
-    e.target.replaceChildren();
+
     e.preventDefault();
+
+    const deleteButton = document.createElement("p");
+    deleteButton.innerHTML = "⨯";
+    deleteButton.className = "delete";
+    deleteButton.addEventListener("click", handleImageDelete);
+
     draggedElement.addEventListener("drop", (e: any) => {
       e.preventDefault();
       e.stopPropagation();
     });
     draggedElement.className = "image";
     e.target.appendChild(draggedElement);
+    e.target.appendChild(deleteButton);
   };
 
   useEffect(() => {
@@ -242,7 +268,65 @@ function App() {
                   onDrop={handleDrop}
                   onDragOver={handleDragOver}
                 >
-                  <p>Drop text content here</p>
+                  <h4
+                    className="sub_heading"
+                    onClick={handleElementSelect}
+                    onDrop={handlePreventDrop}
+                    contentEditable
+                  >
+                    <span className="delete" onClick={handleDelete}>
+                      ⨯
+                    </span>
+                    Welcome
+                  </h4>
+                  <h1
+                    className="heading"
+                    onClick={handleElementSelect}
+                    onDrop={handlePreventDrop}
+                    contentEditable
+                  >
+                    <span className="delete" onClick={handleDelete}>
+                      ⨯
+                    </span>
+                    I'm Ifeanyi Anyanwu
+                  </h1>
+                  <p
+                    className="text"
+                    onClick={handleElementSelect}
+                    onDrop={handlePreventDrop}
+                    contentEditable
+                  >
+                    <span className="delete" onClick={handleDelete}>
+                      ⨯
+                    </span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus, minima delectus explicabo repudiandae, sequi
+                    consequatur quia unde, excepturi fugit quibusdam praesentium
+                    fuga sed aliquid voluptatum! Veniam dolores doloribus quas
+                    modi.
+                  </p>
+                  <button
+                    className="button blue-button"
+                    onClick={handleElementSelect}
+                    onDrop={handlePreventDrop}
+                    contentEditable
+                  >
+                    <span className="delete" onClick={handleDelete}>
+                      ⨯
+                    </span>
+                    See more
+                  </button>
+                  <button
+                    className="button light-button"
+                    onClick={handleElementSelect}
+                    onDrop={handlePreventDrop}
+                    contentEditable
+                  >
+                    <p className="delete" onClick={handleDelete}>
+                      ⨯
+                    </p>
+                    Download
+                  </button>
                 </div>
               </div>
               <div className="secondary_section">
@@ -251,7 +335,15 @@ function App() {
                   onDrop={handleImageDrop}
                   onDragOver={handleDragOver}
                 >
-                  <p>Drop image here</p>
+                  <img
+                    src={Potrait}
+                    alt="Potrait"
+                    onDrop={handlePreventDrop}
+                    className="image"
+                  />
+                  <span className="delete" onClick={handleImageDelete}>
+                    ⨯
+                  </span>
                 </div>
               </div>
             </section>

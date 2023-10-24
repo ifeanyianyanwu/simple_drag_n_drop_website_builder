@@ -1,10 +1,12 @@
 #root {
-  /* max-width: min(100%, 1280px); */
-  text-align: center;
   min-height: 100vh;
   margin: 0 auto;
 }
-.dashed_border {
+
+.text_area:hover {
+  border: 1px dashed gray;
+}
+.image_area:hover {
   border: 1px dashed gray;
 }
 .main {
@@ -13,7 +15,52 @@
   flex-grow: 1;
   aspect-ratio: 16/9;
 }
+.delete {
+  display: none;
+  place-content: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.heading:hover .delete {
+  display: grid;
+}
+.sub_heading:hover .delete {
+  display: grid;
+}
+.text:hover .delete {
+  display: grid;
+}
+.button:hover .delete {
+  display: grid;
+}
+.image_area:hover .delete {
+  display: grid;
+}
+.heading:hover {
+  border: 1px solid red;
+}
+.sub_heading:hover {
+  border: 1px solid red;
+}
+.text:hover {
+  border: 1px solid red;
+}
+.button:hover {
+  border: 1px solid red;
+}
+.image:hover {
+  border: 1px solid red;
+}
 /* CSS */
+
 .nav {
   background-color: white;
   display: flex;
@@ -59,8 +106,8 @@
 .image_area {
   color: black;
   border-radius: 10px;
-  min-width: 70%;
-  min-height: 65%;
+  width: 70%;
+  height: 65%;
   position: absolute;
   top: 45%;
   left: -48px;
@@ -79,6 +126,8 @@
   outline: none;
   border-radius: 5px;
   margin-bottom: 10px;
+  position: relative;
+  font-size: 14px;
 }
 .button + .button {
   margin-left: 10px;
@@ -89,6 +138,7 @@
   margin-bottom: 10px;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .sub_heading {
   font-size: 16px;
@@ -96,6 +146,7 @@
   width: 100%;
   height: 100%;
   font-weight: 700;
+  position: relative;
 }
 
 .text {
@@ -103,6 +154,7 @@
   margin-bottom: 10px;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .image {
   position: absolute;
