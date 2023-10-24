@@ -1,0 +1,36 @@
+#React Website Builder
+This is a simple website builder using React that allows you to create and customize web content easily. You can drag and drop various elements like headings, text, buttons, and images onto the canvas to design your web page. You can also customize the buttons' style and content.
+
+#Features
+Drag and Drop: Easily add and position elements on the canvas.
+Customize Buttons: Choose between two button styles - blue and light.
+Image Upload: Add images to your web page by uploading files.
+Content Editing: Edit text content directly on the canvas.
+Delete Elements: Remove elements with the click of a button.
+#Getting Started
+To use this website builder, follow these steps:
+
+Clone this repository to your local machine.
+Install the required dependencies using npm install or yarn install.
+Start the development server with npm start or yarn start.
+Open your browser and go to http://localhost:3000 to access the website builder.
+#How to Use
+Drag and drop elements from the sidebar onto the canvas to add content.
+Click on any element on the canvas to select it.
+For buttons, you can customize the style (blue or light).
+You can edit text content by clicking on it.
+To delete an element, click the "⨯" button.
+#Download Your Code
+Once you've designed your web page, you can download the HTML and CSS code:
+
+Click the "Download Code" button at the top.
+two files named index.
+html and styles.css will be downloaded to your computer.
+#Preview
+<img width="947" alt="Screenshot 2023-10-24 114034" src="https://github.com/ifeanyianyanwu/simple_drag_n_drop_website_builder/assets/75376053/5b36a6f7-6218-4558-b7f0-445247464af2">
+React Website Builder
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Feel free to customize and use this website builder to create your own web pages. If you have any questions or feedback, please open an issue or pull request. Enjoy building your websites with React!
