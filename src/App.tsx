@@ -176,7 +176,7 @@ function App() {
           <h1 className="text-2xl font-bold">Add</h1>
           <div className="flex-grow flex flex-col gap-4">
             <div className="p-1">
-              <h3 className="text-lg font-semibold mb-1">Basic</h3>
+              <h3 className="text-lg font-semibold mb-1 text-center">Basic</h3>
               <div className="grid gap-1">
                 <button
                   draggable
@@ -189,7 +189,9 @@ function App() {
               </div>
             </div>
             <div className="p-1">
-              <h3 className="text-lg font-semibold mb-1">Typography</h3>
+              <h3 className="text-lg font-semibold mb-1 text-center">
+                Typography
+              </h3>
               <div className="grid gap-1">
                 <h1
                   draggable
@@ -218,7 +220,7 @@ function App() {
               </div>
             </div>
             <div className="p-1">
-              <h3 className="text-lg font-semibold mb-1">Media</h3>
+              <h3 className="text-lg font-semibold mb-1 text-center">Media</h3>
               <div className="grid gap-1">
                 <input
                   accept="image/*"
@@ -379,7 +381,7 @@ function App() {
               </div>
             </>
           ) : (
-            <div className="grid place-items-center mt-8 gap-2">
+            <div className="grid place-items-center mt-8 gap-2 text-center">
               <HiCursorClick size={28} />
               Select a button to activate this paanel
             </div>
