@@ -1,4 +1,4 @@
-# React Website Builder
+# Simple Drag and Drop Website Builder
 This is a simple website builder using React that allows you to create and customize web content easily. You can drag and drop various elements like headings, text, buttons, and images onto the canvas to design your web page. You can also customize the buttons' style and content.
 
 ## Features
@@ -36,4 +36,4 @@ Once you've designed your web page, you can download the HTML and CSS code:
 ## Demo
 [View Live Site](https://drag-and-drop-website-builder.netlify.app/)
 
-Feel free to customize and use this website builder to create your own web pages. If you have any questions or feedback, please open an issue or pull request. Enjoy building your websites with React!
+#### Feel free to customize and use this website builder to create your own web pages. If you have any questions or feedback, please open an issue or pull request. Enjoy building your websites with React!
