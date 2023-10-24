@@ -116,7 +116,7 @@ function App() {
   }, [buttonOptions]);
 
   const handleDownloadCode = () => {
-    const code = document.getElementById("sourceCode");
+    const code = document.getElementById("source");
     const stylesheet = [...document.styleSheets[0].cssRules].slice(2);
     let cssCode = "";
     const htmlCode = `<html lang="en">
@@ -225,10 +225,7 @@ function App() {
           </div>
         </aside>
         <main className="flex-grow  max-w-full">
-          <article
-            id="sourceCode"
-            className="flex-grow flex flex-col aspect-video"
-          >
+          <article id="source" className="main">
             <nav className="nav">
               <h3 className="nav_heading">My Website</h3>
               <ul className="nav_links">

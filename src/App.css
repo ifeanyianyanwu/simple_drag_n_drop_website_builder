@@ -8,6 +8,10 @@
   border: 1px dashed gray;
 }
 .main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  aspect-ratio: 16/9;
 }
 /* CSS */
 .nav {
