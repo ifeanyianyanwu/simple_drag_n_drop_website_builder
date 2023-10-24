@@ -173,14 +173,14 @@ function App() {
                   <LuHeading1 size={35} />
                   Heading
                 </h1>
-                <p
+                <h4
                   draggable
                   onDragStart={handleDragStart}
                   className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1"
                 >
                   <LuHeading4 size={35} />
                   Sub-Heading
-                </p>
+                </h4>
                 <p
                   draggable
                   onDragStart={handleDragStart}
