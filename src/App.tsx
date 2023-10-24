@@ -383,7 +383,7 @@ function App() {
           ) : (
             <div className="grid place-items-center mt-8 gap-2 text-center">
               <HiCursorClick size={28} />
-              Select a button to activate this paanel
+              Select a button to activate this panel
             </div>
           )}
         </aside>
