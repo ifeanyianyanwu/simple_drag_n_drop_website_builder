@@ -9,12 +9,7 @@
 .image_area:hover {
   border: 1px dashed gray;
 }
-.main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  aspect-ratio: 16/9;
-}
+
 .delete {
   display: none;
   place-content: center;
@@ -60,7 +55,12 @@
   border: 1px solid red;
 }
 /* CSS */
-
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  aspect-ratio: 16/9;
+}
 .nav {
   background-color: white;
   display: flex;

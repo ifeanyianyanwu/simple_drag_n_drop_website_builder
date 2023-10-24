@@ -143,7 +143,7 @@ function App() {
 
   const handleDownloadCode = () => {
     const code = document.getElementById("source");
-    const stylesheet = [...document.styleSheets[0].cssRules].slice(2);
+    const stylesheet = [...document.styleSheets[0].cssRules].slice(14);
     let cssCode = "";
     const htmlCode = `<html lang="en">
     <head>
@@ -156,6 +156,8 @@ function App() {
     </body>
     </html>`;
     stylesheet.forEach((item) => (cssCode += item.cssText + "\n"));
+
+    console.log(cssCode);
 
     createAndDownloadFile(htmlCode, "index.html");
     createAndDownloadFile(cssCode, "styles.css");
