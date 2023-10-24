@@ -31,7 +31,6 @@ Once you've designed your web page, you can download the HTML and CSS code:
 
 ## Preview
 <img width="947" alt="Screenshot 2023-10-24 114034" src="https://github.com/ifeanyianyanwu/simple_drag_n_drop_website_builder/assets/75376053/5b36a6f7-6218-4558-b7f0-445247464af2">
-<p>React Website Builder</p>
 
 ## Demo
 [View Live Site](https://drag-and-drop-website-builder.netlify.app/)
