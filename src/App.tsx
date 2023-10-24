@@ -175,7 +175,7 @@ function App() {
       </div>
       <section className="flex gap-4 flex-grow">
         <aside className="w-[120px] flex flex-col gap-6 min-h-full">
-          <h1 className="text-2xl font-bold">Add</h1>
+          <h1 className="text-2xl font-bold text-center">Add</h1>
           <div className="flex-grow flex flex-col gap-4">
             <div className="p-1">
               <h3 className="text-lg font-semibold mb-1 text-center">Basic</h3>
