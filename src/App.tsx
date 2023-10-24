@@ -181,7 +181,7 @@ function App() {
                 <button
                   draggable
                   onDragStart={handleDragStart}
-                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1"
+                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
                 >
                   <RxButton size={35} />
                   Button
@@ -196,7 +196,7 @@ function App() {
                 <h1
                   draggable
                   onDragStart={handleDragStart}
-                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1"
+                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
                 >
                   <LuHeading1 size={35} />
                   Heading
@@ -204,7 +204,7 @@ function App() {
                 <h4
                   draggable
                   onDragStart={handleDragStart}
-                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1"
+                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
                 >
                   <LuHeading4 size={35} />
                   Sub-Heading
@@ -212,7 +212,7 @@ function App() {
                 <p
                   draggable
                   onDragStart={handleDragStart}
-                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1"
+                  className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
                 >
                   <TbTextSize size={35} />
                   Text
@@ -242,7 +242,7 @@ function App() {
                       onDrag={handleDragStart}
                     />
                   ) : (
-                    <p className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1">
+                    <p className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center">
                       <FaRegImage size={35} />
                       Add image
                     </p>
