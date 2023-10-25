@@ -137,7 +137,9 @@ export const Canvas = ({
   return (
     <article id="source" className="main">
       <nav className="nav">
-        <h3 className="nav_heading">My Website</h3>
+        <h3 className="nav_heading" contentEditable>
+          My Website
+        </h3>
         <ul className="nav_links">
           <li>Home</li>
           <li>About</li>

@@ -54,6 +54,9 @@
 .image:hover {
   border: 1px solid red;
 }
+.nav_heading:hover {
+  border: 1px solid red;
+}
 /* CSS */
 .main {
   display: flex;

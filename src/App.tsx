@@ -13,7 +13,7 @@ function App() {
 
   const handleDownloadCode = () => {
     const code = document.getElementById("source");
-    const stylesheet = [...document.styleSheets[0].cssRules].slice(14);
+    const stylesheet = [...document.styleSheets[0].cssRules].slice(15);
     let cssCode = "";
     const htmlCode = `<html lang="en">
     <head>
@@ -53,7 +53,6 @@ function App() {
             setButtonOptions={setButtonOptions}
           />
         </main>
-
         <ControlsSidebar
           buttonOptions={buttonOptions}
           setButtonOptions={setButtonOptions}
