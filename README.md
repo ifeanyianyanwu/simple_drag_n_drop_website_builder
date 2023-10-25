@@ -17,7 +17,7 @@ This is a simple drag and drop website builder using React that allows you to cr
 <img width="948" alt="Screenshot 2023-10-25 132434" src="https://github.com/ifeanyianyanwu/simple_drag_n_drop_website_builder/assets/75376053/b4c3a5ef-eec3-4399-a1f0-aad236f5cd06">
 
 ## Getting Started and Installation
-To setup and use this website builder on your local machine, follow these steps:
+To set up and use this website builder on your local machine, follow these steps:
 
 - Clone this repository to your local machine.
 - Install the required dependencies using npm install.
