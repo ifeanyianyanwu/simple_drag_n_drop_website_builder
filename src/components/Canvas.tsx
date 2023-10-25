@@ -145,6 +145,9 @@ export const Canvas = ({
           <li>About</li>
           <li>Services</li>
           <li>Contact</li>
+          <li>
+            <button>Buy now</button>
+          </li>
         </ul>
       </nav>
       <section className="main_content">

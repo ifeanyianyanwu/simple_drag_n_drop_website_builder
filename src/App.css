@@ -78,7 +78,16 @@
 }
 .nav_links {
   display: flex;
+  align-items: center;
   gap: 16px;
+}
+.nav_links li button {
+  padding: 5px 8px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #0f13d7;
+  color: white;
 }
 
 .main_content {
