@@ -1,7 +1,7 @@
 import React, { ChangeEvent, DragEventHandler, useState } from "react";
 import { FaRegImage } from "react-icons/fa6";
 import { LuHeading1, LuHeading4 } from "react-icons/lu";
-import { RxButton } from "react-icons/rx";
+import { RxBox, RxButton, RxContainer, RxSection } from "react-icons/rx";
 import { TbTextSize } from "react-icons/tb";
 
 type Props = {
@@ -26,13 +26,43 @@ export const AddSidebar = ({ setDraggedElement }: Props) => {
     clone.replaceChildren(innerText);
     clone.removeEventListener("dragstart", handleDragStart);
     clone.setAttribute("draggable", false);
+    clone.setAttribute("key", `${Math.floor(Math.random() * 100000000)}`);
     setDraggedElement(clone);
   };
 
   return (
-    <aside className="w-[120px] flex flex-col gap-6 min-h-full">
+    <aside className="w-[120px] flex flex-col gap-6 max-h-full">
       <h1 className="text-2xl font-bold text-center">Add</h1>
-      <div className="flex-grow flex flex-col gap-4">
+      <div className="flex-grow flex flex-col gap-4  overflow-y-auto flex-shrink min-h-0">
+        <div className="p-1">
+          <h3 className="text-lg font-semibold mb-1 text-center">Structure</h3>
+          <div className="grid gap-1">
+            <div
+              draggable
+              onDragStart={handleDragStart}
+              className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
+            >
+              <RxContainer size={35} />
+              Container
+            </div>
+            <div
+              draggable
+              onDragStart={handleDragStart}
+              className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
+            >
+              <RxSection size={35} />
+              Section
+            </div>
+            <div
+              draggable
+              onDragStart={handleDragStart}
+              className="rounded-md cursor-grab text-xs px-4 py-1 grid place-items-center gap-1 text-center"
+            >
+              <RxBox size={35} />
+              Div Block
+            </div>
+          </div>
+        </div>
         <div className="p-1">
           <h3 className="text-lg font-semibold mb-1 text-center">Basic</h3>
           <div className="grid gap-1">
@@ -83,7 +113,6 @@ export const AddSidebar = ({ setDraggedElement }: Props) => {
               type="file"
               id="imgOne"
               name="imageOne"
-              required
               onChange={handleImageUpload}
               className="hidden"
             />

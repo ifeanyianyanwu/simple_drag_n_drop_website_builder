@@ -1,5 +1,5 @@
 #root {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -39,6 +39,15 @@
 .image_area:hover .delete {
   display: grid;
 }
+.container:hover .delete {
+  display: grid;
+}
+.section:hover .delete {
+  display: grid;
+}
+.div:hover .delete {
+  display: grid;
+}
 .heading:hover {
   border: 1px solid red;
 }
@@ -54,7 +63,13 @@
 .image:hover {
   border: 1px solid red;
 }
-.nav_heading:hover {
+.container:hover {
+  border: 1px solid red;
+}
+.section:hover {
+  border: 1px solid red;
+}
+.div:hover {
   border: 1px solid red;
 }
 /* CSS */
@@ -62,7 +77,11 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
   aspect-ratio: 16/9;
+  overflow-y: auto;
 }
 .nav {
   background-color: white;
@@ -140,6 +159,9 @@
   margin-bottom: 10px;
   position: relative;
   font-size: 14px;
+  width: fit-content;
+  height: fit-content;
+  word-break: break-all;
 }
 .button + .button {
   margin-left: 10px;
@@ -148,29 +170,77 @@
 .heading {
   font-size: 24px;
   margin-bottom: 10px;
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  word-break: break-all;
   position: relative;
+  color: black;
 }
 .sub_heading {
   font-size: 16px;
   margin-bottom: 10px;
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  word-break: break-all;
   font-weight: 700;
   position: relative;
+  color: black;
 }
 
 .text {
   font-size: 14px;
   margin-bottom: 10px;
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  word-break: break-all;
   position: relative;
+  color: black;
 }
 .image {
-  position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+}
+.image-container {
+  display: flex;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+.section {
+  min-height: 100px;
+  width: 100%;
+  position: relative;
+}
+.div {
+  min-height: 100px;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-yellow {
+  background-color: rgba(239, 255, 10, 0.849);
+}
+.bg-blue {
+  background-color: #0f13d7;
+}
+.single-column {
+  display: grid;
+}
+.double-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
 }

@@ -41,9 +41,9 @@ export const PortfolioTemplate = () => {
           Download Code
         </button>
       </div>
-      <section className="flex gap-4 flex-grow">
+      <section className="flex gap-4 flex-shrink min-h-0">
         <AddSidebar setDraggedElement={setDraggedElement} />
-        <main className="flex-grow  max-w-full">
+        <main className="flex-grow max-w-full">
           <Canvas
             buttonOptions={buttonOptions}
             draggedElement={draggedElement}
