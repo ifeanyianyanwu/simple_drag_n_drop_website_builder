@@ -55,6 +55,12 @@ export const PortfolioTemplate = () => {
           buttonOptions={buttonOptions}
           setButtonOptions={setButtonOptions}
           controlsType={controlsType}
+          sectionOptions={{ color: "", layout: "" }}
+          setSectionOptions={() => {}}
+          containerOptions=""
+          setContainerOptions={() => {}}
+          divOptions={{ color: "", flow: "" }}
+          setDivOptions={() => {}}
         />
       </section>
     </>
