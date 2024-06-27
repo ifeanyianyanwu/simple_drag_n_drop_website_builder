@@ -9,8 +9,11 @@ export const HomePage = () => {
   const [recentDesigns, setRecentDesigns] = useState([]);
 
   useEffect(() => {
-    const recents = JSON.parse(localStorage.templates);
-    setRecentDesigns(recents);
+    const recents = localStorage.templates
+      ? JSON.parse(localStorage.templates)
+      : [];
+
+    if (recents) setRecentDesigns(recents);
   }, []);
 
   return (

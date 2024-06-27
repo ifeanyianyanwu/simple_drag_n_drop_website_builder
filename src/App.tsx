@@ -15,11 +15,18 @@ function App() {
 
   return (
     <main className="h-screen flex flex-col gap-2 p-4">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio_template" element={<PortfolioTemplate />} />
-        <Route path="/:id" element={<Template />} />
-      </Routes>
+      <div className="lg:block hidden">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/portfolio_template" element={<PortfolioTemplate />} />
+          <Route path="/:id" element={<Template />} />
+        </Routes>
+      </div>
+      <div className="grid place-content-center lg:hidden h-full p-5">
+        <h1 className="font-semibold text-3xl">
+          This webpage is not available on Mobile Devices
+        </h1>
+      </div>
     </main>
   );
 }
