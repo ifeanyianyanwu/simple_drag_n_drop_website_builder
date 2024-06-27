@@ -51,6 +51,10 @@ export const Template = () => {
       (item: LOCAL_TEMPLATE) => item.id === params.id
     )[0];
     if (temp && container) container.innerHTML = temp.html;
+    const source = document.getElementById("source");
+    // source?.addEventListener("dragover", handleDragOver as any);
+    // source?.addEventListener("drop", handleDrop as any);
+    source;
   }, []);
   //====End=====
 
@@ -240,11 +244,11 @@ export const Template = () => {
 
   return (
     <>
-      <div className="flex items-center justify-end gap-12">
+      <div className="flex items-center justify-end gap-12 mb-4">
         <form onSubmit={handleSaveDesign} className="flex gap-2 items-center">
           <input
             required
-            className="rounded-sm p-1"
+            className="rounded-sm p-1 border border-gray-500"
             type="text"
             value={formData}
             onChange={(e) => setFormData(e.target.value)}
